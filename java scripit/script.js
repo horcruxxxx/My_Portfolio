@@ -1,0 +1,20 @@
+let moon = document.getElementById('moon');
+let stars = document.getElementById('stars');
+let mountain_F = document.getElementById('mountain_F');
+let mountain_B = document.getElementById('mountain_B');
+let text = document.getElementById('name');
+let header = document.querySelector('header');
+
+window.addEventListener('scroll',function(){
+    let  value = window.scrollY;
+    stars.style.left = value + 'px';
+    moon.style.top = value*1.05 + 'px';
+    mountain_B.style.top = value*0.5 + 'px';
+    mountain_F.style.bottom = value*0 + 'px';
+    text.style.marginRight = value*4 + 'px';
+    text.style.marginTop = value*1.5 + 'px';
+    header.style.top= value*0.75 + 'px';
+
+    // stars.style.left = value + 'px';
+    // stars.style.left = value + 'px';
+})
